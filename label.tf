@@ -15,10 +15,11 @@ module "log_analytics_workspace" {
   additional_tag_map = {} /* Additional attributes (e.g. 1) */
 }
 
-module "azure_sql_db" {
+module "activity_solution" {
   source             = "git::https://github.com/cloudposse/terraform-null-label.git?ref=0.14.1"
   context            = var.context
-  attributes         = ["db"]
+  attributes         = ["ActivityLogAnalytics"]
+  label_order        = ["attributes"]
   delimiter          = "-"
   additional_tag_map = {} /* Additional attributes (e.g. 1) */
 }

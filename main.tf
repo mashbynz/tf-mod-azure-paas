@@ -14,6 +14,21 @@ resource "azurerm_log_analytics_workspace" "default" {
   retention_in_days   = var.log_analytics_retention_in_days
 }
 
+# Log Analytics Solutions
+
+resource "azurerm_log_analytics_solution" "AzureActivity" {
+  solution_name         = module.activity_solution.id
+  location              = azurerm_resource_group.default.location
+  resource_group_name   = azurerm_resource_group.default.name
+  workspace_resource_id = azurerm_log_analytics_workspace.default.id
+  workspace_name        = azurerm_log_analytics_workspace.default.name
+
+  plan {
+    publisher = var.solution_publisher
+    product   = var.solution_AzureActivity
+  }
+}
+
 # Security Center
 
 

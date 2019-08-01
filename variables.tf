@@ -24,6 +24,18 @@ variable "log_analytics_retention_in_days" {
   default     = 0
 }
 
+variable "solution_publisher" {
+  type        = string
+  description = ""
+  default     = ""
+}
+
+variable "solution_AzureActivity" {
+  type        = string
+  description = ""
+  default     = ""
+}
+
 /*****
 Label Module Variables
 *****/
