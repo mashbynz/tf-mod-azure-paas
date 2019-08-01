@@ -18,8 +18,8 @@ module "log_analytics_workspace" {
 module "activity_solution" {
   source             = "git::https://github.com/cloudposse/terraform-null-label.git?ref=0.14.1"
   context            = var.context
-  attributes         = ["AzureActivity\u0028prodloganalytics-analytics\u0029"]
+  attributes         = ["AzureActivity",\u0028,"prodloganalytics-analytics",\u0029]
   label_order        = ["attributes"]
-  delimiter          = "-"
+  delimiter          = ""
   additional_tag_map = {} /* Additional attributes (e.g. 1) */
 }
