@@ -21,7 +21,7 @@ resource "azurerm_log_analytics_solution" "AzureActivity" {
   location              = azurerm_resource_group.default.location
   resource_group_name   = azurerm_resource_group.default.name
   workspace_resource_id = azurerm_log_analytics_workspace.default.id
-  workspace_name        = azurerm_log_analytics_workspace.default.name
+  workspace_name        = module.log_analytics_workspace.id
 
   plan {
     publisher = var.solution_publisher
