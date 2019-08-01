@@ -17,7 +17,7 @@ resource "azurerm_log_analytics_workspace" "default" {
 # Log Analytics Solutions
 
 resource "azurerm_log_analytics_solution" "AzureActivity" {
-  solution_name         = join(module.activity_solution.id, "(", azurerm_log_analytics_workspace.default.name, ")")
+  solution_name         = module.activity_solution.id
   location              = azurerm_resource_group.default.location
   resource_group_name   = azurerm_resource_group.default.name
   workspace_resource_id = azurerm_log_analytics_workspace.default.id
