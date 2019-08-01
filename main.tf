@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "default" {
 }
 
 resource "azurerm_log_analytics_workspace" "default" {
-  name                = module.log_analytics_workspace.id`
+  name                = module.log_analytics_workspace.id
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   sku                 = var.log_analytics_sku
