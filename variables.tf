@@ -3,3 +3,9 @@ variable "log_analytics_sku" {
   description = ""
   default     = ""
 }
+
+variable "log_analytics_retention_in_days" {
+  type        = number
+  description = ""
+  default     = ""
+}
