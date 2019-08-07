@@ -16,18 +16,18 @@ resource "azurerm_log_analytics_workspace" "default" {
 
 # Log Analytics Solutions
 
-resource "azurerm_log_analytics_solution" "AzureActivity" {
-  solution_name         = module.activity_solution.id
-  location              = azurerm_resource_group.default.location
-  resource_group_name   = azurerm_resource_group.default.name
-  workspace_resource_id = azurerm_log_analytics_workspace.default.id
-  workspace_name        = azurerm_log_analytics_workspace.default.name
+# resource "azurerm_log_analytics_solution" "AzureActivity" {
+#   solution_name         = module.activity_solution.id
+#   location              = azurerm_resource_group.default.location
+#   resource_group_name   = azurerm_resource_group.default.name
+#   workspace_resource_id = azurerm_log_analytics_workspace.default.id
+#   workspace_name        = azurerm_log_analytics_workspace.default.name
 
-  plan {
-    publisher = var.solution_publisher
-    product   = var.solution_AzureActivity
-  }
-}
+#   plan {
+#     publisher = var.solution_publisher
+#     product   = var.solution_AzureActivity
+#   }
+# }
 
 # Security Center
 
