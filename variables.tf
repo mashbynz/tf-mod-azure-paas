@@ -36,6 +36,12 @@ variable "solution_AzureActivity" {
   default     = ""
 }
 
+variable "security_center_scope" {
+  type        = string
+  description = ""
+  default     = ""
+}
+
 /*****
 Label Module Variables
 *****/
