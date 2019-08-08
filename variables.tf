@@ -59,7 +59,7 @@ variable "environment" {
 }
 
 variable "loganalytics_name" {
-  type        = string
+  type        = list(string)
   default     = ""
   description = "Solution name, e.g. 'app' or 'jenkins'"
 }
