@@ -31,9 +31,9 @@ resource "azurerm_log_analytics_workspace" "default" {
 
 # Security Center
 
-resource "azurerm_security_center_workspace" "default" {
-  scope        = var.security_center_scope
-  workspace_id = azurerm_log_analytics_workspace.default.id
-}
+# resource "azurerm_security_center_workspace" "default" {
+#   scope        = var.security_center_scope
+#   workspace_id = azurerm_log_analytics_workspace.default.id
+# }
 
 
