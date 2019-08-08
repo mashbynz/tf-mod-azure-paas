@@ -12,6 +12,12 @@ variable "region" {
 Azure PaaS Module Variables - https://github.com/mashbynz/tf-mod-azure-paas
 *****/
 
+variable "loganalytics_name" {
+  type        = string
+  description = ""
+  default     = ""
+}
+
 variable "log_analytics_sku" {
   type        = string
   description = ""
