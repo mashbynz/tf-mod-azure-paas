@@ -11,8 +11,8 @@ module "log_analytics_workspace" {
   source             = "git::https://github.com/cloudposse/terraform-null-label.git?ref=0.14.1"
   context            = var.context
   # attributes         = ["analytics"]
-  attributes         = ["prodnztaloganalytics"]  # has to be GLOBALLY unique
-  label_order        = ["attributes"]
+  attributes         = ["analytics"]  # has to be GLOBALLY unique
+  # label_order        = ["attributes"]
   delimiter          = "-"
   additional_tag_map = {} /* Additional attributes (e.g. 1) */
 }
