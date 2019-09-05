@@ -20,7 +20,7 @@ variable "paas_config" {
 
   default = {
     location     = {}
-    vnet_enabled = true
+    paas_enabled = true
   }
   description = "Default PaaS configuration"
 }
