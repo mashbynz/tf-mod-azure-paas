@@ -8,6 +8,12 @@ variable "region" {
   default     = ""
 }
 
+variable "paas_enabled" {
+  type        = bool
+  description = "switch if this resource is to be created or not"
+  default     = true
+}
+
 /*****
 Azure PaaS Module Variables - https://github.com/mashbynz/tf-mod-azure-paas
 *****/
