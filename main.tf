@@ -10,6 +10,7 @@ resource "azurerm_resource_group" "default" {
 }
 
 resource "azurerm_log_analytics_workspace" "default" {
+  count    = var.paas_enabled == true ? length(keys(var.paas_config.location)) : 0
   name                = module.log_analytics_workspace.id
   location            = azurerm_resource_group.default.*.location[count.index]
   resource_group_name = azurerm_resource_group.default.*.name[count.index]
