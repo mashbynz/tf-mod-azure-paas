@@ -55,6 +55,12 @@ variable "security_center_scope" {
   default     = ""
 }
 
+variable "sharedservices_name" {
+  type        = string
+  default     = ""
+  description = "Solution name, e.g. 'app' or 'jenkins'"
+}
+
 /*****
 Label Module Variables
 *****/

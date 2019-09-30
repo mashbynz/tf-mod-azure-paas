@@ -1,7 +1,8 @@
 # Log Analytics
 
 resource "azurerm_resource_group" "default" {
-  name     = module.rg_label.id
+  # name     = module.rg_label.id
+  name     = "${element(keys(var.paas_config.location), count.index)}${var.sharedservices_name}${length(keys(var.paas_config.location))}${module.rg_label.delimiter}${element(module.rg_label.attributes, 0)}"
   location = var.region
   tags     = module.rg_label.tags
 }
