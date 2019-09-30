@@ -11,8 +11,8 @@ resource "azurerm_resource_group" "default" {
 
 resource "azurerm_log_analytics_workspace" "default" {
   name                = module.log_analytics_workspace.id
-  location            = azurerm_resource_group.default.location
-  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.*.location[count.index]
+  resource_group_name = azurerm_resource_group.default.*.name[count.index]
   sku                 = var.log_analytics_sku
   retention_in_days   = var.log_analytics_retention_in_days
 }
